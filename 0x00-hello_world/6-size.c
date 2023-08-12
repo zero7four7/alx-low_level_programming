@@ -9,7 +9,7 @@ int main(void)
 {
 	int a;
 	long int b;
-	lomg lomg int c;
+	long long int c;
 	char d;
 	float f;
 

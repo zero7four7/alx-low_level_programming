@@ -19,7 +19,7 @@ int main(void)
 		{
 			for (ten = 0 ; ten < 10 ; ten++)
 			{
-				for (bas = 0 ; bas < 10 ; bss++)
+				for (bas = 0 ; bas < 10 ; bas++)
 				{
 					putchar('0' + tho);
 					putchar('0' + hun);

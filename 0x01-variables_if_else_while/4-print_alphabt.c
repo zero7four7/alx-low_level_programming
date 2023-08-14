@@ -5,6 +5,7 @@
  *
  * Return: A;ways 0 (Success)
  */
+
 int main(void)
 {
 	char c;

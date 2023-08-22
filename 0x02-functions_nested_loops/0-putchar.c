@@ -8,15 +8,15 @@
 
 int main(void)
 {
-	char school[10] = "_putchar";
+	char c[] = "main";
 
 	int i;
 
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < 9; i++)
 	{
-		_putchar(School[i]);
+		_putchar(c[i]);
 	}
-	_putchar(10);
+	_putchar('\n');
 	return (0);
 }
 

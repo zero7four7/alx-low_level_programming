@@ -1,13 +1,14 @@
-#include "main.h"
+#include "holberton.h"
+#include <ctype.h>
 
 /**
- * _isaplha - check if the given character is lower case
- * @C: character to test.
+ * _isalpha - check if the given character is lower case.
+ * @c: character to test.
  *
- * Return: 1 (True) else 0 (Fals)
+ * Return: 1 (True) else 0 (False)
  */
 
-int _isaplha(char c)
+int _isalpha(char c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{

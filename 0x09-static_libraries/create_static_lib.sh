@@ -1,2 +1,3 @@
 #!/bin/bash
-cc -fPIC -c *.c && ar rc liball.a *.o
+gcc -Wall -pedantic -Werroe -Wextra -c *.c
+ar -rc liball.a *.o

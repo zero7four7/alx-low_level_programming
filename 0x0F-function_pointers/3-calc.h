@@ -1,36 +1,23 @@
-#include "3-calc.h"
+#ifndef CALC_H
+#define CALC_H
+
+int (*get_op_func(char *s))(int, int);
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
 
 /**
- * main - Entry point
- * @argc: the number of the parameters
- * @argv: the parameters in the case the number to be calculated.
+ * struct op - Struct op
  *
- * Return: 0 (Success)
+ * @op: The operator
+ * @f: The function associated
  */
-
-int main(int argc, char *argv[])
+typedef struct op
 {
-	int n1, n2, result;
-	int (*p)(int, int);
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
 
-	if (argc < 4 || argc > 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-
-	n1 = atoi(argv[1]);
-	n2 = atoi(argv[3]);
-
-	p = get_op_func(argv[2]);
-
-	if (p == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	result = p(n1, n2);
-
-	printf("%d\n", result);
-	return (0);
-}
+#endif

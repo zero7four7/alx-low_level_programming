@@ -1,14 +1,17 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include "3-calc.h"
+#include <stdlib.h>
+
 /**
- * get_op_func - matches operator from main
- * @s: op str
- * Return: 0
+ * get_op_func - check if the operator is valid
+ * @s: value input operator
+ *
+ * Return: 0 if false, something else otherwise.
  */
+
 int (*get_op_func(char *s))(int, int)
 {
-	op_t op_s[] = {
+	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -16,14 +19,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+	int i;
 
-	int i = 0;
-
-	while (op_s[i].op)
+	i = 0;
+	while (i < 6)
 	{
-		if (*(op_s[i].op) == *s)
-			return (op_s[i].f);
-		i++;
+		if (ops[i].op[0] == s[0])
+			return (ops[i].f);
+	i++;
 	}
-	return (NULL);
+	printf("Error\n");
+	exit(99);
 }

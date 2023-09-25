@@ -1,6 +1,4 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * main - check the program
@@ -11,24 +9,32 @@
 
 int main(int argc, char *argv[])
 {
-	int (*get)(int, int);
-	int a, b, res;
-
+	int a, b;
+	int (*operation)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	f = get_op_func(argv[2]);
-	if (f == NULL)
+
+	if (argv[2][1])
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	operation = get_op_func(argv[2]);
+
+	if (operation == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	res = f(a, b);
-	printf("%d\n", res);
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", operation(a, b));
 	return (0);
 }

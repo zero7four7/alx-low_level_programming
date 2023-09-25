@@ -1,6 +1,4 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * get_op_func - check if the operator is valid
@@ -19,14 +17,14 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	i = 0;
-	while (ops[i].op != NULL)
+	while (i < 10)
 	{
-		if (strcmp(s, ops[i].op) == 0)
+		if (s[0] == ops->op[i])
 			break;
 		i++;
 	}
-	return (ops[i].f);
+
+	return (ops[i / 2].f);
 }

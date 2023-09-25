@@ -1,12 +1,12 @@
-#include <stdio.h>
 #include "3-calc.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * get_op_func - check if the operator is valid
  * @s: value input operator
  *
- * Return: 0 if false, something else otherwise.
+ * Return: Function address.
  */
 
 int (*get_op_func(char *s))(int, int)
@@ -22,12 +22,11 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (i < 6)
+	while (ops[i].op != NULL)
 	{
-		if (ops[i].op[0] == s[0])
-			return (ops[i].f);
-	i++;
+		if (strcmp(s, ops[i].op) == 0)
+			break;
+		i++;
 	}
-	printf("Error\n");
-	exit(99);
+	return (ops[i].f);
 }

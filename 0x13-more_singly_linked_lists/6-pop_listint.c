@@ -2,24 +2,25 @@
 
 /**
  * pop_listint - Deletes the head node of a list.
- * @head: Pointer 
+ * @head: Pointer
  *
- * Return: Empty - o. Otherwise Head node's data (n).
+ * Return: 0 (empty). Otherwise - Data (n)
+ *
  */
 
 int pop_listint(listint_t **head)
 {
-	listint_t *popped;
-	int cont;
+	listint_t *tmp;
+	int ret;
 
 	if (*head == NULL)
 		return (0);
 
-	popped = *head;
-	cont = popped->n;
-	free(popped);
-
+	tmp = *head;
+	ret = (*head)->n;
 	*head = (*head)->next;
 
-	return (cont);
+	free(tmp);
+
+	return (ret);
 }

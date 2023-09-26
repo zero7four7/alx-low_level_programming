@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * find_listint_loop - Finds the loop
- * @head - Pointer
+ * find_listint_loop - Finds the loop contained in the list
+ * @head: Pointer to the head
  *
- * Return: NULL (no loop). Otherwise - address node.
+ * Return: NULL (no loop). Otherwise - address of the node
  */
 
 listint_t *find_listint_loop(listint_t *head)

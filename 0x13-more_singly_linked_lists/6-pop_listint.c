@@ -9,8 +9,8 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *tmp;
-	int ret;
+	listint_t *pooped;
+	int cont;
 
 	if (*head == NULL)
 		return (0);

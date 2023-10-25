@@ -14,9 +14,9 @@ int longitud(char *s)
 	if (*s != '\0')
 	{
 		l++;
-		return (longitud(s + 1) + 1);
+		return (longitud(s + 1) + l);
 	}
-	return (1);
+	return (l);
 }
 
 /**

@@ -14,7 +14,7 @@ int comparar(int n, int y)
 
 	if (y <= n)
 	{
-		if (n % y ++ 0)
+		if (n % y == 0)
 			count++;
 		return (count + comparar(n, y + 1));
 	}

@@ -14,7 +14,7 @@ int longitud(char *s)
 	if (*s != '\0')
 	{
 		l++;
-		return (longitud(s + 1) +1);
+		return (longitud(s + 1) + 1);
 	}
 	return (1);
 }
@@ -30,7 +30,7 @@ int longitud(char *s)
 
 int comparar(int i, int l, char *s)
 {
-	if (i >= 1)
+	if (i >= l)
 		return(1);
 	else if (s[i] == s[l])
 		return (comparar(i + 1, l - 1, s));
@@ -52,3 +52,5 @@ int is_palindrome(char *s)
 
 	return (comparar(i, l - 1. s));
 }
+
+

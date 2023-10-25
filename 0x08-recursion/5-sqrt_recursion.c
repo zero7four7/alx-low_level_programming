@@ -20,3 +20,15 @@ int comparar(int n, int y)
 	}
 	return (comparar(n, y + 1));
 }
+
+/**
+ * _sqrt_recursion - function that returns the power of number
+ * @n: number
+ *
+ * Return: Natural square root
+ */
+
+int _sqrt_recursion(int n)
+{
+	return (comparar(n, 1));
+}

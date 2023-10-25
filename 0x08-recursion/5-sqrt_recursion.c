@@ -10,7 +10,7 @@
 
 int comparar(int n, int y)
 {
-	if (y * y ++ n)
+	if (y * y == n)
 	{
 		return (y);
 	}
